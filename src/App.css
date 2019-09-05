@@ -1,0 +1,13 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.twitter-link {
+  color: #61dafb;
+}
+
+a {
+  text-decoration: none;
+}
