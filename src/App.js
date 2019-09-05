@@ -1,22 +1,26 @@
 import React from 'react';
-import './App.css';
+import Quotes from './Quotes';
+
+const container = {
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center",
+  background: "red",
+  width: 400,
+  height: 300
+}
 
 function App() {
   return (
-    <div className="app-container" id="quote-box">
-      <h1 className="title">Quote Machine</h1>
-      <p className="quote" id="text">
-        {}
-        <span className="author" id="author">
-         {}
-        </span>
-      </p>
-      
+    <div className="app-container" id="quote-box" style={container}>
+      <Quotes />    
       <div className="button-container">
         <button className="quote-button" id="new-quote">
           Next Quote
         </button>
-        <a
+        <button><a
+          style={{textDecoration: "none"}}
           className="twitter-link"
           id="tweet-quote"
           href="twitter.com/intent/tweet"
@@ -24,7 +28,7 @@ function App() {
           rel="noopener noreferrer"
         >
           Tweet
-        </a>
+        </a></button>
       </div>
     </div>
   );
