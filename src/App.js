@@ -1,6 +1,5 @@
 import React from 'react';
 import Quotes from './Quotes';
-import Buttons from './Buttons';
 
 const container = {
   display: "flex",
@@ -15,8 +14,7 @@ const container = {
 function App() {
   return (
     <div className="app-container" id="quote-box" style={container}>
-      <Quotes />    
-      <Buttons />
+      <Quotes />
     </div>
   );
 }

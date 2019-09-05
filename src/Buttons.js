@@ -1,14 +1,6 @@
 import React from 'react';
 
 class Buttons extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-    getQuote() {
-        this.setState({
-
-        })
-    }
     render() {
         return (
             <div className="button-container">
