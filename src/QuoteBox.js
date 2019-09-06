@@ -64,8 +64,7 @@ class QuoteBox extends React.Component {
     }
     render() {
         return(
-            <div id="quote-box">
-                <h1>Stan Lee Quotes</h1>
+            <div className="quote-box" id="quote-box">
                 <Quotes randomQuote={this.state.randomQuote}/>
                 <Buttons getQuote={this.getQuote}/>
             </div>

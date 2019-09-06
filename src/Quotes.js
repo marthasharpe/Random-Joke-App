@@ -1,11 +1,10 @@
 import React from 'react';
 
 const quoteBubble = {
-    width: "auto",
-    maxWidth: 500,
+    width: 500,
     background: "white",
     borderRadius: "50%",
-    padding: "3rem",
+    padding: "3rem 4rem 1.5rem 4rem",
     margin: "1.5rem", 
     textAlign: "center"
   }
