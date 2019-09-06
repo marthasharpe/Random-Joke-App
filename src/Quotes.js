@@ -1,5 +1,4 @@
 import React from 'react';
-// import Buttons from './Buttons';
 
 const quoteBubble = {
     width: "auto",
@@ -14,22 +13,21 @@ const quoteBubble = {
 const possibleQuotes = [
     {
         quote: "If you are interested in what you do, that keeps you going!",
-        author: "Stan Lee"
+        author: "Joe Lee"
     },
     {
         quote: "I don’t really see a need to retire as long as I am having fun.",
-        author: "Stan Lee"
+        author: "Bob Lee"
     },
     {
         quote: "Excelsior!",
         author: "Stan Lee"
     }
 ]
-let randomQuote = possibleQuotes[Math.floor(Math.random() * possibleQuotes.length)]
 
 class Quotes extends React.Component {
     state = {
-        randomQuote
+        randomQuote: possibleQuotes[Math.floor(Math.random() * possibleQuotes.length)]
     }
     getQuote = () => {
         this.setState({
@@ -37,22 +35,21 @@ class Quotes extends React.Component {
         })
     }
     render() {
-
         return(
             <div className="quote-bubble" style={quoteBubble}>
                 <h2 className="quote-text" id="text">
                     {this.state.randomQuote.quote}
                 </h2>
                 <h3 className="author" id="author">
-                    - {this.state.randomQuote.author}
+                    {this.state.randomQuote.author}
                 </h3>
             
                 <div className="button-container">
                     <button
-                    className="quote-button"
-                    id="new-quote"
-                    style={{cursor: "pointer"}}
-                    onClick={this.getQuote}
+                        className="quote-button"
+                        id="new-quote"
+                        style={{cursor: "pointer"}}
+                        onClick={this.getQuote}
                     >
                     Next Quote
                     </button>
