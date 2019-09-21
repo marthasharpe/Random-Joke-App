@@ -25,7 +25,7 @@ function Buttons(props) {
                 style={button}
                 onClick={props.getNewJoke}
             >
-                New Joke
+                Get Joke
             </div>
             <div
                 className="button"

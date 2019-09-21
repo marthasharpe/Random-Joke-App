@@ -46,7 +46,7 @@ class QuoteBox extends React.Component {
     }
 
     addLoveCount = () => {
-        if (this.state.loveCount >= 5){
+        if (this.state.loveCount === 5){
             alert("You seem to be enjoying yourself. Share some jokes with your geeky friends.")
         } else {
             this.setState({
@@ -56,7 +56,7 @@ class QuoteBox extends React.Component {
     }
 
     addHuhCount = () => {
-        if (this.state.huhCount >= 5){
+        if (this.state.huhCount === 5){
             alert("You may need to study more programming and come back later.")
         } else {
             this.setState({
@@ -66,7 +66,7 @@ class QuoteBox extends React.Component {
     }
 
     addSpareCount = () => {
-        if (this.state.spareCount >= 5){
+        if (this.state.spareCount === 5){
             alert("You may not like 'em but at least you get 'em!")
         } else {
             this.setState({
