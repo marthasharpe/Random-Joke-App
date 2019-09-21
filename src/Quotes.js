@@ -15,7 +15,7 @@ const hidden = {
 
 function Quotes(props) {
     return(
-        <div className="quote-bubble">
+        <div className="quote-container">
             <h2 className="setup" id="setup" style={quoteBubble}>
                 {props.setup}
             </h2>

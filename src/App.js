@@ -3,7 +3,7 @@ import QuoteBox from './QuoteBox';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{width: "100%"}}>
       <h1 style={{color: "white", textAlign: "center"}}>.getJoke()</h1>
       <QuoteBox />
     </div>

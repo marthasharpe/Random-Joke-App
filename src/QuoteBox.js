@@ -46,26 +46,38 @@ class QuoteBox extends React.Component {
     }
 
     addLoveCount = () => {
-        this.setState({
-            loveCount: this.state.loveCount + 1
-        })
+        if (this.state.loveCount >= 5){
+            alert("You seem to be enjoying yourself. Share some jokes with your geeky friends.")
+        } else {
+            this.setState({
+                loveCount: this.state.loveCount + 1
+            })
+        }
     }
 
     addHuhCount = () => {
-        this.setState({
-            huhCount: this.state.huhCount + 1
-        })
+        if (this.state.huhCount >= 5){
+            alert("You may need to study more programming and come back later.")
+        } else {
+            this.setState({
+                huhCount: this.state.huhCount + 1
+            })
+        }
     }
 
     addSpareCount = () => {
-        this.setState({
-            spareCount: this.state.spareCount + 1
-        })
+        if (this.state.spareCount >= 5){
+            alert("You may not like 'em but at least you get 'em!")
+        } else {
+            this.setState({
+                spareCount: this.state.spareCount + 1
+            })
+        }
     }
 
     render() {
         return(
-            <div className="quote-box" id="quote-box">
+            <div className="quote-box" id="quote-box" style={{width: "100%"}}>
                 <Buttons
                     getNewJoke={this.getNewJoke}
                     getPunchline={this.getPunchline}
