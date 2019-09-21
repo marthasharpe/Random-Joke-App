@@ -2,21 +2,38 @@ import React from 'react';
 import Quotes from './Quotes';
 import Buttons from './Buttons';
 
-const possibleQuotes = [{quote:"only quote", author:"me"}];
-
 class QuoteBox extends React.Component {
     state = {
-        randomQuote: possibleQuotes[Math.floor(Math.random() * possibleQuotes.length)]
+        setup: "",
+        punchline: ""
     }
+
+    componentDidMount = () => {
+        this.getQuote();
+    }
+
     getQuote = () => {
-        this.setState({
-            randomQuote: possibleQuotes[Math.floor(Math.random() * possibleQuotes.length)]
+        fetch("https://official-joke-api.appspot.com/jokes/random")
+        .then(response => {
+            return response.json();
         })
+        .then(data => {
+            console.log(data)
+            this.setState({
+                setup: data.setup,
+                punchline: data.punchline
+            })
+        })
+        .catch(err => {
+            console.log(err);
+        });
+
     }
+
     render() {
         return(
             <div className="quote-box" id="quote-box">
-                <Quotes randomQuote={this.state.randomQuote}/>
+                <Quotes setup={this.state.setup} punchline={this.state.punchline}/>
                 <Buttons getQuote={this.getQuote}/>
             </div>
         )
