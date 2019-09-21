@@ -13,15 +13,15 @@ class QuoteBox extends React.Component {
     }
 
     getQuote = () => {
-        fetch("https://official-joke-api.appspot.com/jokes/random")
+        fetch("https://official-joke-api.appspot.com/jokes/programming/random")
         .then(response => {
             return response.json();
         })
         .then(data => {
             console.log(data)
             this.setState({
-                setup: data.setup,
-                punchline: data.punchline
+                setup: data[0].setup,
+                punchline: data[0].punchline
             })
         })
         .catch(err => {
