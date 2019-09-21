@@ -6,7 +6,10 @@ const buttonBox = {
 }
 
 const button = {
-    background: "white",
+    background: "darkblue",
+    color: "white",
+    fontSize: "1.2rem",
+    border: "3px solid white",
     cursor: "pointer",
     padding: "0.5rem",
     margin: "1rem",
