@@ -5,26 +5,33 @@ const buttonBox = {
     justifyContent: "center",
 }
 
+const button = {
+    background: "white",
+    cursor: "pointer",
+    padding: "0.5rem",
+    margin: "1rem",
+    borderRadius: "0.5rem"
+}
+
 function Buttons(props) {
     return(
         <div className="button-container" style={buttonBox}>
-            <button
-                className="quote-button"
-                id="new-quote"
-                style={{cursor: "pointer"}}
-                onClick={props.getQuote}
-            >
-                Punchline
-            </button>
-            
-            <button
-                className="quote-button"
-                id="new-quote"
-                style={{cursor: "pointer"}}
-                onClick={props.getQuote}
+            <div
+                className="button"
+                id="new-joke"
+                style={button}
+                onClick={props.getNewJoke}
             >
                 New Joke
-            </button>
+            </div>
+            <div
+                className="button"
+                id="punchline"
+                style={button}
+                onClick={props.getPunchline}
+            >
+                Get Answer
+            </div> 
         </div>
     )
 }

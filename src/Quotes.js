@@ -1,24 +1,27 @@
 import React from 'react';
 
 const quoteBubble = {
-    width: 500,
+    width: 300,
     background: "white",
     borderRadius: "50%",
-    padding: "3rem 4rem 1.5rem 4rem",
+    padding: "3rem 4rem",
     margin: "1.5rem", 
     textAlign: "center"
   }
 
+const hidden = {
+    display: "none"
+}
 
 function Quotes(props) {
     return(
-        <div className="quote-bubble" style={quoteBubble}>
-            <h2 className="quote-text" id="text">
+        <div className="quote-bubble">
+            <h2 className="setup" id="setup" style={quoteBubble}>
                 {props.setup}
             </h2>
-            <h3 className="author" id="author">
+            <h2 className="punchline" id="punchline" style={props.hidden? hidden : quoteBubble}>
                 {props.punchline}
-            </h3>
+            </h2>
         </div>
     );
 }

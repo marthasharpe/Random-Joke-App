@@ -5,14 +5,16 @@ import Buttons from './Buttons';
 class QuoteBox extends React.Component {
     state = {
         setup: "",
-        punchline: ""
+        punchline: "",
+        hidden: true
     }
 
     componentDidMount = () => {
-        this.getQuote();
+        this.getNewJoke();
     }
 
-    getQuote = () => {
+    getNewJoke = () => {
+        console.log(this.state);
         fetch("https://official-joke-api.appspot.com/jokes/programming/random")
         .then(response => {
             return response.json();
@@ -21,20 +23,29 @@ class QuoteBox extends React.Component {
             console.log(data)
             this.setState({
                 setup: data[0].setup,
-                punchline: data[0].punchline
+                punchline: data[0].punchline,
+                hidden: true
             })
         })
         .catch(err => {
             console.log(err);
         });
+    }
 
+    getPunchline = () => {
+        console.log(this.state);
+        if(this.state.hidden === true) {
+            this.setState({
+                hidden: !this.state.hidden
+            })
+        }
     }
 
     render() {
         return(
             <div className="quote-box" id="quote-box">
-                <Quotes setup={this.state.setup} punchline={this.state.punchline}/>
-                <Buttons getQuote={this.getQuote}/>
+                <Buttons getNewJoke={this.getNewJoke} getPunchline={this.getPunchline}/>
+                <Quotes setup={this.state.setup} punchline={this.state.punchline} hidden={this.state.hidden}/>
             </div>
         )
     }
