@@ -2,7 +2,7 @@ import React from 'react';
 
 const container = {
     display: "flex",
-    justifyContent: "space-around",
+    justifyContent: "center",
     color: "white",
 }
 
@@ -11,7 +11,8 @@ const button = {
     flexDirection: "column",
     alignItems: "center",
     cursor: "pointer",
-    margin: "1rem"
+    margin: "1rem",
+    width: 100
 }
 
 function Reactions(props) {

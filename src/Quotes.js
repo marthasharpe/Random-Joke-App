@@ -13,9 +13,16 @@ const hidden = {
     display: "none"
 }
 
+const container = {
+    display: "flex",
+    flexFlow: "row wrap",
+    justifyContent: "center",
+    alignItems: "center"
+}
+
 function Quotes(props) {
     return(
-        <div className="quote-container">
+        <div className="quote-container" style={container}>
             <h2 className="setup" id="setup" style={quoteBubble}>
                 {props.setup}
             </h2>
