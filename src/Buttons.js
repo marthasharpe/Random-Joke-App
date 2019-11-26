@@ -5,7 +5,6 @@ const buttonBox = {
     justifyContent: "center",
 }
 
-<<<<<<< HEAD
 const button = {
     background: "darkblue",
     color: "white",
@@ -28,32 +27,6 @@ function Buttons(props) {
                 {props.newJoke ? 'Get Answer' : 'Get Joke'}
             </div>
             
-=======
-function Buttons(props) {
-    return(
-        <div className="button-container" style={buttonBox}>
-            <button
-                className="quote-button"
-                id="new-quote"
-                style={{cursor: "pointer"}}
-                onClick={props.getQuote}
-            >
-            Next Quote
-            </button>
-            
-            <button>
-                <a
-                style={{textDecoration: "none"}}
-                className="twitter-link"
-                id="tweet-quote"
-                href="twitter.com/intent/tweet"
-                target="_blank"
-                rel="noopener noreferrer"
-                >
-                Tweet
-                </a>
-            </button>
->>>>>>> 7fb0e13d265fca1f242856935f4c56d2137d52e0
         </div>
     )
 }
