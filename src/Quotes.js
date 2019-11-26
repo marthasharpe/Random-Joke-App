@@ -17,7 +17,8 @@ const container = {
     display: "flex",
     flexFlow: "row wrap",
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
+    height: 280,
 }
 
 function Quotes(props) {
