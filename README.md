@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -66,3 +67,14 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+=======
+# Random Quote Machine
+
+### A freeCodeCamp project.
+
+I build this page using React and intended to use it as a re-make of my Stan Lee Tribute page.  
+Unfortunately, it wouldn't pass the freeCodeCamp test unless each quote was from a different author.  
+I got around this by changing Stan's first name for each quote.
+
+I later made a different repo for a Stan Lee React Tribute which you can see [here](https://stan-lee-tribute.netlify.com/).
+>>>>>>> 7fb0e13d265fca1f242856935f4c56d2137d52e0
