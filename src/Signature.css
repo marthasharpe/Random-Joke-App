@@ -1,0 +1,21 @@
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.signature {
+    color: white;
+    margin: 0;
+}
+
+.link {
+    cursor: pointer;
+}
+
+.icon {
+    height: 2rem;
+}

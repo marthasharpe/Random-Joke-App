@@ -7,7 +7,7 @@ class QuoteBox extends React.Component {
     state = {
         setup: "",
         punchline: "",
-        hidden: true,
+        newJoke: false,
         loveCount: 0,
         huhCount: 0,
         spareCount: 0
@@ -18,17 +18,15 @@ class QuoteBox extends React.Component {
     }
 
     getNewJoke = () => {
-        console.log(this.state);
         fetch("https://official-joke-api.appspot.com/jokes/programming/random")
         .then(response => {
             return response.json();
         })
         .then(data => {
-            console.log(data)
             this.setState({
                 setup: data[0].setup,
                 punchline: data[0].punchline,
-                hidden: true
+                newJoke: true,
             })
         })
         .catch(err => {
@@ -37,12 +35,9 @@ class QuoteBox extends React.Component {
     }
 
     getPunchline = () => {
-        console.log(this.state);
-        if(this.state.hidden === true) {
-            this.setState({
-                hidden: !this.state.hidden
-            })
-        }
+        this.setState({
+            newJoke: false
+        })
     }
 
     addLoveCount = () => {
@@ -78,15 +73,19 @@ class QuoteBox extends React.Component {
     render() {
         return(
             <div className="quote-box" id="quote-box" style={{width: "100%"}}>
-                <Buttons
-                    getNewJoke={this.getNewJoke}
-                    getPunchline={this.getPunchline}
-                    />
+                
                 <Quotes
                     setup={this.state.setup}
                     punchline={this.state.punchline}
-                    hidden={this.state.hidden}
+                    newJoke={this.state.newJoke}
                     />
+                
+                <Buttons
+                    getNewJoke={this.getNewJoke}
+                    getPunchline={this.getPunchline}
+                    newJoke={this.state.newJoke}
+                    />
+
                 <Reactions
                     loveCount={this.state.loveCount}
                     huhCount={this.state.huhCount}

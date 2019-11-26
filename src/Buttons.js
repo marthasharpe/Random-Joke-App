@@ -13,7 +13,7 @@ const button = {
     cursor: "pointer",
     padding: "0.5rem",
     margin: "1rem",
-    borderRadius: "0.5rem"
+    borderRadius: "0.5rem",
 }
 
 function Buttons(props) {
@@ -21,20 +21,12 @@ function Buttons(props) {
         <div className="button-container" style={buttonBox}>
             <div
                 className="button"
-                id="new-joke"
                 style={button}
-                onClick={props.getNewJoke}
+                onClick={props.newJoke ? props.getPunchline : props.getNewJoke}
             >
-                Get Joke
+                {props.newJoke ? 'Get Answer' : 'Get Joke'}
             </div>
-            <div
-                className="button"
-                id="punchline"
-                style={button}
-                onClick={props.getPunchline}
-            >
-                Get Answer
-            </div> 
+            
         </div>
     )
 }

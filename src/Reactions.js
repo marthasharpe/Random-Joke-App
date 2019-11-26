@@ -24,7 +24,6 @@ function Reactions(props) {
                 style={button}
                 onClick={() => props.addLoveCount()}
                 >
-                Love it!
                 <span
                     role="img"
                     aria-label="rofl"
@@ -40,7 +39,6 @@ function Reactions(props) {
                 style={button}
                 onClick={() => props.addHuhCount()}
                 >
-                Huh?
                 <span
                     role="img"
                     aria-label="thinking"
@@ -56,7 +54,6 @@ function Reactions(props) {
                 style={button}
                 onClick={() => props.addSpareCount()}
                 >
-                Spare me!
                 <span
                     role="img"
                     aria-label="eye-roll"

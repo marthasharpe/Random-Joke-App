@@ -23,10 +23,13 @@ const container = {
 function Quotes(props) {
     return(
         <div className="quote-container" style={container}>
-            <h2 className="setup" id="setup" style={quoteBubble}>
+            <h2 className="setup" id="setup" style={props.newJoke ? quoteBubble : hidden}>
                 {props.setup}
             </h2>
-            <h2 className="punchline" id="punchline" style={props.hidden? hidden : quoteBubble}>
+            <h2
+                className="punchline"
+                id="punchline"
+                style={props.newJoke ? hidden : quoteBubble}>
                 {props.punchline}
             </h2>
         </div>
